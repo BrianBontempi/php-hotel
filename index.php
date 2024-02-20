@@ -36,6 +36,15 @@
     <title>Hotel list</title>
 </head>
 <body>
-
+<h1>Hotel list:</h1>
+    <ul>
+    <?php foreach ($hotels as $hotel){?>
+        <li>Name: <?php echo $hotel['name']?></li>
+        <li>Description: <?php echo $hotel['description']?></li>
+        <li>Parking: <?php echo $hotel['parking']?></li>
+        <li>Vote: <?php echo $hotel['vote']?></li>
+        <li>Distance to center: <?php echo $hotel['distance_to_center']?></li>
+    <?php } ?>
+    </ul>
 </body>
 </html> 
