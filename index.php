@@ -26,6 +26,12 @@
             'vote' => 2,
             'distance_to_center' => 50],
     ];
+
+    if (isset($_GET['filtroParcheggio']) && $_GET['filtroParcheggio'] == "1") {
+        $hotels = array_filter($hotels, function ($hotel) {
+            return $hotel['parking'] === true;
+        });
+    }
 ?>
 
 <!DOCTYPE html>
